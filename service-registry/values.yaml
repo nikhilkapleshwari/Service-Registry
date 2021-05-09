@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: "nikhil1632"
+  name: "service-registry"
+  tag: "latest"
+component:
+  value: "backend"
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+  port: 3057
+  targetPort: 8761
+  nodePort: 30008
